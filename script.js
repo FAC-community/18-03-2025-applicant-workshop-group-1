@@ -30,16 +30,6 @@ form.addEventListener('submit', (event) => {
     form.reset();
 });
 
-// Generate a random number
-const randomNumberButton = document.getElementById('btn-random-num')
-const numberBox = document.getElementById('number-box')
-
-randomNumberButton.addEventListener('click', () => {
-  const randomNum = Math.floor(Math.random() * 100);
-  numberBox.textContent = randomNum;
-
-});
-
 // Function to render the items on data-container
 function renderItems(items) {
     const container = document.getElementById('data-container');
@@ -50,6 +40,19 @@ function renderItems(items) {
       div.innerHTML = `<p>${item}</p>`;
       container.appendChild(div);
     });
+  }
+
+    const randomNumberButton = document.getElementById('btn-random-num')
+    const numberBox = document.getElementById('number-box')
+    
+    randomNumberButton.addEventListener('click', () => {
+      const randomNum = Math.floor(Math.random() * 100);
+      numberBox.textContent = randomNum;
+    
+    });
+
+  function toggleTheme() {
+    document.body.classList.toggle("dark-mode");
   }
 
 /* IDEAS FOR ADDITIONAL INTERACTIONS
