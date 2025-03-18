@@ -1,33 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration form</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js"></script>
-</head>
-<body>
-  <h2>Registration Form</h2>
-    <div class="form-container">
-        <form>
-            <label for="name">First name</label>
-            <input type="text" id="name" name="name" required>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Interactive Web Project</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+    <header>
+        <h1>Welcome to the Interactive Web Project</h1>
+        <nav>
+        <ul>
+            <li><a href="#section1" id="link-section1">Section 1</a></li>
+            <li><a href="#section2" id="link-section2">Section 2</a></li>
+            <li><a href="#section3" id="link-section3">Section 3</a></li>
+            <li><a href="#data-section" id="link-data-section">Data Section</a></li>
+        </ul>
+        </nav>
+    </header>
 
-            <label for="name">Last name</label>
-            <input type="text" id="name" name="name" required>
+    <main>
+        <section id="section1" class="content-section">
+            <h2>Section 1: Introduction</h2>
+            <p>This section contains an introduction to the project.</p>
+            <button id="btn-toggle1">Toggle Info</button>
+            <div class="hidden-info">Here is some hidden information.</div>
+        </section>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+        <section id="section2" class="content-section">
+            <h2>Section 2: Interactive Area</h2>
+            <p>Try interacting with the elements below.</p>
+            <button id="btn-change-color">Change Background Color</button>
+            <div id="color-box">Watch me change!</div>
+        </section>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+        <section id="section3" class="content-section">
+            <h2>Section 3: Form Section</h2>
+            <form id="feedback-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
 
-            <button type="submit">Register</button>
-        </form>
-    </div>
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="feedback"></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+            <div id="form-response"></div>
+        </section>
+
+        <section id="dom_section" class="content-section">
+            <h2>Section 3.5: DOM Experiments</h2>
+            <p>Generate a random number by clicking on the button.</p>
+            <button id="btn-random-num">Generate a random number</button>
+            <div id="number-box">Waiting for number</div>
+        </section>
+
+        <!-- New section for rendered data from data.js -->
+        <section id="data-section" class="content-section">
+            <h2>Section 4: Data Section</h2>
+            <div id="data-container"></div>
+        </section>
+
+        <h2>Registration Form</h2>
+        
+        <div class="form-container">
+            <form>
+                <label for="name">First name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="name">Last name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
 
     <br>
     <button onclick="toggleTheme()">Toggle Theme</button>
-</body>
+
+    </main>
+
+    <footer>
+        <p>Project created for JavaScript and DOM manipulation practice.</p>
+    </footer>
+
+    <!-- Use type="module" to support ES module imports -->
+    <script type="module" src="./script.js"></script>
+    
+    </body>
 </html>

@@ -41,6 +41,43 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+.hidden-info {
+    display: none;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius);
+}
+
+#color-box {
+    width: 50%;
+    height: 100px;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    border-radius: var(--border-radius);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+input, textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
     width: 100%;
   }
   
@@ -56,3 +93,16 @@
     --button-bg: #ff9800;
     --button-text: black;
   }
+#number-box {
+    border: 2px dashed #4CAF50; /* Dashed border */
+    padding: 0.5rem 1rem; /* Padding inside the box */
+    border-radius: px; /* Optional: Rounded corners */
+    background-color: #f4f4f4; /* Optional: Background color */
+    text-align: center; /* Optional: Center text */
+    font-family: 'Poppins', sans-serif; /* Optional: Font family */
+    font-size: 2rem; /* Optional: Font size */
+    color: #333; /* Optional: Text color */
+    width: 29%;
+}
+
+
